@@ -73,5 +73,5 @@ server.listen(3000, function () {
 /*
 * 设置socket.IO服务器
 * */
-var chatServer = require('./lib/char_server');
+var chatServer = require('./lib/chat_server');
 chatServer.listen(server);
