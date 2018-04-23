@@ -21,7 +21,7 @@ function send404(response){
 function sendFile(response, filePath, filecontents) {
   response.writeHead(
     200,
-    {'Content-Type': mime.lookup(path.basename(filePath))}
+    {'Content-Type': mime.getType(filePath)}//path.basename(filePath)
   );
   response.end(filecontents);
 }
@@ -70,3 +70,8 @@ var server = http.createServer(function (request, response) {//创建http服务�
 server.listen(3000, function () {
   console.log("Server listening on port 3000.");
 });
+/*
+* 设置socket.IO服务器
+* */
+var chatServer = require('./lib/char_server');
+chatServer.listen(server);
