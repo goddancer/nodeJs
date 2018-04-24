@@ -44,7 +44,7 @@ Chat.prototype.processCommand = function(command) {
     default://如果命令无法识别，返回错误信息
       message = 'Unrecognized command.';
       break;
-  };
+  }
 
   return message;
 };
