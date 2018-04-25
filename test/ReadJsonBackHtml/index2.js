@@ -18,7 +18,7 @@ function getJsonData(res){//读取json数据并做处理
    if(error){
      handleError(error, res);
    }else{
-     getTemplate(JSON.parse(data.toString()), res);//JSON.pare()返回数据对象
+     getTemplate(JSON.parse(data.toString()), res);//JSON.pare()将json字符串转换为对象
    }
  })
 }
